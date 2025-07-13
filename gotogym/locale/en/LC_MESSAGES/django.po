@@ -1,0 +1,178 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+msgid "Has cerrado sesión correctamente."
+msgstr "You have successfully logged out."
+
+msgid "Volver al inicio"
+msgstr "Back to home"
+
+msgid "Iniciar sesión"
+msgstr "Login"
+
+msgid "Usuario o Email"
+msgstr "Username or Email"
+
+msgid "Contraseña"
+msgstr "Password"
+
+msgid "Ingresar"
+msgstr "Login"
+
+msgid "¿No tienes una cuenta?"
+msgstr "Don't have an account?"
+
+msgid "Regístrate"
+msgstr "Sign up"
+
+msgid "Restablecer contraseña"
+msgstr "Reset password"
+
+msgid "Enviar correo de restablecimiento"
+msgstr "Send reset email"
+
+msgid "¡Tu contraseña ha sido restablecida exitosamente!"
+msgstr "Your password has been successfully reset!"
+
+msgid "Ingresa tu nueva contraseña"
+msgstr "Enter your new password"
+
+msgid "Se ha enviado un correo con instrucciones para restablecer tu contraseña."
+msgstr "An email has been sent with instructions to reset your password."
+
+msgid "Cerrar sesión"
+msgstr "Logout"
+
+msgid "Bienvenido a GoToGym"
+msgstr "Welcome to GoToGym"
+
+msgid "Esta es la página principal."
+msgstr "This is the main page."
+
+msgid "Innovación Cuántica y Bienestar Personalizado"
+msgstr "Quantum Innovation and Personalized Wellness"
+
+msgid "Descubre la elegancia del lujo deportivo combinado con tecnología avanzada."
+msgstr "Discover the elegance of sports luxury combined with advanced technology."
+
+msgid "Ya tengo cuenta"
+msgstr "I already have an account"
+
+msgid "Empieza tu transformación"
+msgstr "Start your transformation"
+
+msgid "Colección destacada"
+msgstr "Featured Collection"
+
+msgid "Alianza exclusiva con John Frank Alza"
+msgstr "Exclusive partnership with John Frank Alza"
+
+msgid "Presentamos una colección que redefine la moda deportiva fusionando la alta costura con la más avanzada tecnología textil."
+msgstr "We present a collection that redefines sports fashion by merging haute couture with the most advanced textile technology."
+
+msgid "Nuestra esencia"
+msgstr "Our essence"
+
+msgid "Fusionamos lujo deportivo con nanotecnología avanzada y bienestar integral, creando una experiencia de usuario única y emocionalmente gratificante."
+msgstr "We merge sports luxury with advanced nanotechnology and holistic wellness, creating a unique and emotionally rewarding user experience."
+
+msgid "Beneficios Clave"
+msgstr "Key Benefits"
+
+msgid "Rendimiento Mejorado"
+msgstr "Enhanced Performance"
+
+msgid "Optimiza tu desempeño con textiles avanzados que se adaptan a tu ritmo."
+msgstr "Optimize your performance with advanced textiles that adapt to your pace."
+
+msgid "Protección UV"
+msgstr "UV Protection"
+
+msgid "Cuida tu piel con nuestra tecnología antimicrobiana y protección solar integrada."
+msgstr "Take care of your skin with our antimicrobial technology and integrated sun protection."
+
+msgid "Control Térmico"
+msgstr "Thermal Control"
+
+msgid "Mantente cómodo con materiales que regulan tu temperatura corporal."
+msgstr "Stay comfortable with materials that regulate your body temperature."
+
+msgid "Confort Personalizado "
+msgstr "Personalized Comfort"
+
+msgid "Texturas únicas que brindan una experiencia sensorial inigualable."
+msgstr "Unique textures that provide an unparalleled sensory experience."
+
+msgid "Nuestros clientes opinan"
+msgstr "Our clients say"
+
+msgid "“Las prendas de GoToGym se convirtieron en mis favoritas. Al principio parecían normales, pero con el tiempo noté la diferencia positiva en rendimiento y comodidad. Ahora no puedo hacer ejercicio sin ellas.”"
+msgstr "GoToGym garments became my favorites. At first they seemed normal, but over time I noticed the positive difference in performance and comfort. Now I can't work out without them."
+
+msgid "— Juan Manuel Goenaga"
+msgstr "— Juan Manuel Goenaga"
+
+msgid "Tecnología innovadora"
+msgstr "Innovative technology"
+
+msgid "Utilizamos grafeno y nanotecnología en nuestras prendas, garantizando resistencia, flexibilidad y un compromiso continuo con la sostenibilidad ambiental."
+msgstr "We use graphene and nanotechnology in our garments, ensuring strength, flexibility, and a continuous commitment to environmental sustainability."
+
+msgid "Conocer más"
+msgstr "Learn more"
+
+msgid "Acerca de"
+msgstr "About"
+
+msgid "Contacto"
+msgstr "Contact"
+
+msgid "Privacidad"
+msgstr "Privacy"
+
+msgid "Términos"
+msgstr "Terms"
+
+msgid "Únete a nuestra comunidad y descubre la revolución del bienestar."
+msgstr "Join our community and discover the wellness revolution."
+
+msgid "Síguenos en redes sociales:"
+msgstr "Follow us on social media:"
+
+msgid "2025 GoToGym. Todos los derechos reservados."
+msgstr "2025 GoToGym. All rights reserved."
+
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Pedidos"
+msgstr "Orders"
+
+msgid "Bienestar"
+msgstr "Wellness"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Tienda"
+msgstr "Store"
+
+msgid "Colección"
+msgstr "Collection"
+
+msgid "Tecnología"
+msgstr "Technology"
+
+msgid "Administrador"
+msgstr "Admin"
+
+msgid "Explorar ahora"
+msgstr "Explore now"
+
+msgid "Descubrir colección"
+msgstr "Discover collection"
+
+msgid "Política de privacidad"
+msgstr "Privacy Policy"

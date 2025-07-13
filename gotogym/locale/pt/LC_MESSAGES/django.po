@@ -1,0 +1,178 @@
+msgid "Has cerrado sesión correctamente."
+msgstr "Sessão encerrada com sucesso."
+
+msgid "Volver al inicio"
+msgstr "Voltar ao início"
+
+msgid "Iniciar sesión"
+msgstr "Entrar"
+
+msgid "Usuario o Email"
+msgstr "Usuário ou Email"
+
+msgid "Contraseña"
+msgstr "Senha"
+
+msgid "Ingresar"
+msgstr "Entrar"
+
+msgid "¿No tienes una cuenta?"
+msgstr "Não tem uma conta?"
+
+msgid "Regístrate"
+msgstr "Cadastre-se"
+
+msgid "Restablecer contraseña"
+msgstr "Redefinir senha"
+
+msgid "Enviar correo de restablecimiento"
+msgstr "Enviar e-mail de redefinição"
+
+msgid "¡Tu contraseña ha sido restablecida exitosamente!"
+msgstr "Sua senha foi redefinida com sucesso!"
+
+msgid "Ingresa tu nueva contraseña"
+msgstr "Digite sua nova senha"
+
+msgid "Se ha enviado un correo con instrucciones para restablecer tu contraseña."
+msgstr "Um e-mail foi enviado com instruções para redefinir sua senha."
+
+msgid "Cerrar sesión"
+msgstr "Sair"
+
+msgid "Bienvenido a GoToGym"
+msgstr "Bem-vindo ao GoToGym"
+
+msgid "Esta es la página principal."
+msgstr "Esta é a página principal."
+
+msgid "Innovación Cuántica y Bienestar Personalizado"
+msgstr "Inovação Quântica e Bem-Estar Personalizado"
+
+msgid "Descubre la elegancia del lujo deportivo combinado con tecnología avanzada."
+msgstr "Descubra a elegância do luxo esportivo combinado com tecnologia avançada."
+
+msgid "Ya tengo cuenta"
+msgstr "Já tenho conta"
+
+msgid "Empieza tu transformación"
+msgstr "Comece sua transformação"
+
+msgid "Colección destacada"
+msgstr "Coleção em destaque"
+
+msgid "Alianza exclusiva con John Frank Alza"
+msgstr "Parceria exclusiva com John Frank Alza"
+
+msgid "Presentamos una colección que redefine la moda deportiva fusionando la alta costura con la más avanzada tecnología textil."
+msgstr "Apresentamos uma coleção que redefine a moda esportiva ao unir alta costura com a mais avançada tecnologia têxtil."
+
+msgid "Nuestra esencia"
+msgstr "Nossa essência"
+
+msgid "Fusionamos lujo deportivo con nanotecnología avanzada y bienestar integral, creando una experiencia de usuario única y emocionalmente gratificante."
+msgstr "Fundimos luxo esportivo com nanotecnologia avançada e bem-estar integral, criando uma experiência única e emocionalmente gratificante para o usuário."
+
+msgid "Beneficios Clave"
+msgstr "Benefícios Chave"
+
+msgid "Rendimiento Mejorado"
+msgstr "Desempenho Aprimorado"
+
+msgid "Optimiza tu desempeño con textiles avanzados que se adaptan a tu ritmo."
+msgstr "Otimize seu desempenho com tecidos avançados que se adaptam ao seu ritmo."
+
+msgid "Protección UV"
+msgstr "Proteção UV"
+
+msgid "Cuida tu piel con nuestra tecnología antimicrobiana y protección solar integrada."
+msgstr "Cuide da sua pele com nossa tecnologia antimicrobiana e proteção solar integrada."
+
+msgid "Control Térmico"
+msgstr "Controle Térmico"
+
+msgid "Mantente cómodo con materiales que regulan tu temperatura corporal."
+msgstr "Fique confortável com materiais que regulam sua temperatura corporal."
+
+msgid "Confort Personalizado "
+msgstr "Conforto Personalizado"
+
+msgid "Texturas únicas que brindan una experiencia sensorial inigualable."
+msgstr "Texturas únicas que proporcionam uma experiência sensorial incomparável."
+
+msgid "Nuestros clientes opinan"
+msgstr "Nossos clientes opinam"
+
+msgid "“Las prendas de GoToGym se convirtieron en mis favoritas. Al principio parecían normales, pero con el tiempo noté la diferencia positiva en rendimiento y comodidad. Ahora no puedo hacer ejercicio sin ellas.”"
+msgstr "As roupas da GoToGym se tornaram minhas favoritas. No começo pareciam normais, mas com o tempo notei a diferença positiva em desempenho e conforto. Agora não consigo treinar sem elas."
+
+msgid "— Juan Manuel Goenaga"
+msgstr "— Juan Manuel Goenaga"
+
+msgid "Tecnología innovadora"
+msgstr "Tecnologia inovadora"
+
+msgid "Utilizamos grafeno y nanotecnología en nuestras prendas, garantizando resistencia, flexibilidad y un compromiso continuo con la sostenibilidad ambiental."
+msgstr "Utilizamos grafeno e nanotecnologia em nossas peças, garantindo resistência, flexibilidade e um compromisso contínuo com a sustentabilidade ambiental."
+
+msgid "Conocer más"
+msgstr "Saiba mais"
+
+msgid "Acerca de"
+msgstr "Sobre"
+
+msgid "Contacto"
+msgstr "Contato"
+
+msgid "Privacidad"
+msgstr "Privacidade"
+
+msgid "Términos"
+msgstr "Termos"
+
+msgid "Únete a nuestra comunidad y descubre la revolución del bienestar."
+msgstr "Junte-se à nossa comunidade e descubra a revolução do bem-estar."
+
+msgid "Síguenos en redes sociales:"
+msgstr "Siga-nos nas redes sociais:"
+
+msgid "2025 GoToGym. Todos los derechos reservados."
+msgstr "2025 GoToGym. Todos os direitos reservados."
+
+msgid "Inicio"
+msgstr "Início"
+
+msgid "Pedidos"
+msgstr "Pedidos"
+
+msgid "Bienestar"
+msgstr "Bem-estar"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Tienda"
+msgstr "Loja"
+
+msgid "Colección"
+msgstr "Coleção"
+
+msgid "Tecnología"
+msgstr "Tecnologia"
+
+msgid "Administrador"
+msgstr "Administrador"
+
+msgid "Explorar ahora"
+msgstr "Explorar agora"
+
+msgid "Descubrir colección"
+msgstr "Descobrir coleção"
+
+msgid "Política de privacidad"
+msgstr "Política de Privacidade"
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt\n"
