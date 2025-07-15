@@ -117,6 +117,10 @@ def edit_profile(request):
             changed = True
         if changed:
             user.save()
+            # Si es superusuario y acaba de completar nombre y apellido, redirige al dashboard con notificación
+            if user.is_superuser and first_name and last_name:
+                messages.success(request, 'Usuario actualizado')
+                return redirect('dashboard')
             messages.success(request, 'Perfil actualizado correctamente.')
         else:
             messages.info(request, 'No se realizaron cambios.')
