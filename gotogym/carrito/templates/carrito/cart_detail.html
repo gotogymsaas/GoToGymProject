@@ -1,72 +1,83 @@
+
 {% extends 'base.html' %}
-{% block title %}Shopping Cart{% endblock %}
+{% load humanize %}
+{% block title %}Carrito de Compras{% endblock %}
 {% block content %}
-<div class="container mx-auto py-8 px-2 sm:px-4">
-  <div class="flex flex-col lg:flex-row gap-8">
+<div class="container mx-auto py-10 px-2 sm:px-4">
+  <div class="flex flex-col lg:flex-row gap-10">
     <div class="w-full lg:w-2/3">
-      <h2 class="text-2xl font-bold mb-4">Shopping Cart <span class="text-base font-normal text-gray-500">{{ num_items }} items</span></h2>
-      <div class="bg-white rounded-xl shadow p-4">
+      <h2 class="text-3xl font-extrabold mb-6 flex items-center gap-2">
+        <span class="inline-block bg-blue-100 text-blue-600 rounded-full px-3 py-1 text-lg"><i class="fas fa-shopping-cart"></i></span>
+        Carrito <span class="text-base font-normal text-gray-500">({{ num_items }} productos)</span>
+      </h2>
+      <div class="bg-white rounded-2xl shadow-lg p-6">
         {% for item in items %}
-        <div class="flex flex-col sm:flex-row items-center justify-between border-b py-4 last:border-b-0 gap-4">
-          <div class="flex items-center gap-4 w-full sm:w-auto">
-            <img src="{{ item.producto.image.url }}" alt="{{ item.producto.name }}" class="w-16 h-16 object-contain rounded"/>
+        <div class="flex flex-col sm:flex-row items-center justify-between border-b border-gray-200 py-6 last:border-b-0 gap-6 hover:bg-gray-50 transition-all">
+          <div class="flex items-center gap-5 w-full sm:w-auto">
+            <img src="{{ item.producto.image.url }}" alt="{{ item.producto.name }}" class="w-20 h-20 object-cover rounded-lg shadow"/>
             <div>
-              <div class="font-semibold">{{ item.producto.name }}</div>
-              <div class="text-gray-500 text-sm">{{ item.producto.description|truncatechars:30 }}</div>
+              <div class="font-bold text-lg text-gray-800">{{ item.producto.name }}</div>
+              <div class="text-gray-500 text-sm mb-2">{{ item.producto.description|truncatechars:40 }}</div>
+              <span class="inline-block bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">Cantidad: {{ item.cantidad }}</span>
             </div>
           </div>
           <form method="post" action="{% url 'carrito:update_cart' item.producto.id %}" class="flex items-center gap-2">
             {% csrf_token %}
-            <button type="submit" name="cantidad" value="{{ item.cantidad|add:'-1' }}" class="px-2 py-1 border rounded">-</button>
-            <input type="number" name="cantidad" value="{{ item.cantidad }}" min="1" class="w-12 text-center border rounded"/>
-            <button type="submit" name="cantidad" value="{{ item.cantidad|add:'1' }}" class="px-2 py-1 border rounded">+</button>
+            <button type="submit" name="accion" value="restar" class="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-lg font-bold">-</button>
+            <input type="number" name="cantidad" value="{{ item.cantidad }}" min="1" class="w-14 text-center border rounded-lg py-2"/>
+            <button type="submit" name="accion" value="sumar" class="px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-lg font-bold">+</button>
           </form>
-          <div class="font-semibold">€ {{ item.subtotal|floatformat:2 }}</div>
-          <a href="{% url 'carrito:remove_from_cart' item.producto.id %}" class="text-gray-400 hover:text-red-500 text-xl">&times;</a>
+          <div class="font-bold text-xl text-blue-600">$ {{ item.subtotal|intcomma }}</div>
+          <a href="{% url 'carrito:remove_from_cart' item.producto.id %}" class="text-gray-400 hover:text-red-500 text-2xl transition-all" title="Eliminar"><i class="fas fa-trash-alt"></i></a>
         </div>
         {% empty %}
-        <div class="text-center text-gray-500 py-8">El carrito está vacío.</div>
+        <div class="text-center text-gray-500 py-10 text-lg">El carrito está vacío.</div>
         {% endfor %}
       </div>
-      <a href="/tienda/" class="mt-4 inline-block text-gray-600 hover:underline">&larr; Back to shop</a>
+      <a href="/tienda/" class="mt-6 inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-xl shadow-lg font-bold text-lg transition-all hover:from-green-500 hover:to-blue-600 hover:scale-105">
+        <i class="fas fa-arrow-left"></i>
+        Seguir comprando
+      </a>
     </div>
     <div class="w-full lg:w-1/3">
-      <div class="bg-gray-100 rounded-xl p-6">
-        <h3 class="font-bold text-lg mb-4">Summary</h3>
-        <div class="flex justify-between mb-2">
-          <span>ITEMS {{ num_items }}</span>
-          <span>$ {{ total|floatformat:4 }}</span>
+      <div class="bg-gradient-to-br from-gray-100 to-blue-50 rounded-2xl p-8 shadow-lg">
+        <h3 class="font-extrabold text-xl mb-6 flex items-center gap-2"><i class="fas fa-receipt"></i> Resumen</h3>
+        <div class="flex justify-between mb-4 text-gray-700 font-semibold">
+          <span>Productos ({{ num_items }})</span>
+          <span>$ {{ total|intcomma }}</span>
         </div>
-        <div class="mb-2">
-          <span class="block mb-1">SHIPPING</span>
-          <select class="w-full border rounded px-2 py-1">
-            <option>Standard Delivery - $ {{ shipping|floatformat:2 }}</option>
+        <div class="mb-4">
+          <span class="block mb-2 font-semibold text-gray-600">Envío</span>
+          <select class="w-full border rounded px-2 py-2 bg-white shadow">
+            <option>Envío estándar - $ {{ shipping|intcomma }}</option>
           </select>
         </div>
-        <div class="mb-2">
-          <span class="block mb-1">GIVE CODE</span>
-          <form class="flex">
-            <input type="text" class="flex-1 border rounded-l px-2 py-1" placeholder="Enter your code"/>
-            <button type="submit" class="bg-white border border-l-0 rounded-r px-3">→</button>
+        <div class="mb-4">
+          <span class="block mb-2 font-semibold text-gray-600">Código de descuento</span>
+          <form class="flex gap-2">
+            <input type="text" class="flex-1 border rounded-l px-2 py-2" placeholder="Ingresa tu código"/>
+            <button type="submit" class="bg-blue-600 text-white border border-l-0 rounded-r px-4 py-2 font-bold hover:bg-blue-700 transition-all"><i class="fas fa-gift"></i></button>
           </form>
         </div>
-        <div class="flex justify-between font-bold text-lg mt-4 mb-4">
-          <span>TOTAL PRICE</span>
-          <span>€ {{ total_price|floatformat:2 }}</span>
+        <div class="flex justify-between font-extrabold text-xl mt-6 mb-6">
+          <span>Total a pagar</span>
+          <span>$ {{ total_price|intcomma }}</span>
         </div>
         {% if num_items > 0 %}
         <form method="post" action="{% url 'carrito:checkout' %}">
           {% csrf_token %}
-          <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-400 text-white py-3 rounded-xl font-bold mt-4 text-lg flex items-center justify-center gap-2 shadow-lg hover:from-blue-700 hover:to-cyan-500 transition-all">
-            <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.22.7/mercadopago/logo__large_plus.png" alt="MercadoPago" class="h-7 inline-block"/>
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-400 text-white py-4 rounded-xl font-extrabold text-lg flex items-center justify-center gap-3 shadow-lg hover:from-blue-700 hover:to-cyan-500 transition-all">
+            <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.22.7/mercadopago/logo__large_plus.png" alt="MercadoPago" class="h-8 inline-block"/>
             Pagar con MercadoPago
           </button>
         </form>
         {% else %}
-        <div class="text-center text-gray-400 py-4 font-semibold">Agrega productos al carrito para pagar con MercadoPago.</div>
+        <div class="text-center text-gray-400 py-6 font-semibold">Agrega productos al carrito para pagar con MercadoPago.</div>
         {% endif %}
       </div>
     </div>
   </div>
 </div>
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 {% endblock %}

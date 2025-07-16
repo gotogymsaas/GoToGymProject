@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'accounts',
     'blog',
     'products',
@@ -101,7 +102,7 @@ WSGI_APPLICATION = 'gotogym.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gotogym_bd',
+        'NAME': 'gotogym_db',
         'USER': 'gotogym_user',
         'PASSWORD': '123Margarita6',
         'HOST': 'localhost',

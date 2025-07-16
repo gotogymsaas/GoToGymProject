@@ -24,10 +24,21 @@ def remove_from_cart(request, product_id):
 # Actualizar cantidad
 def update_cart(request, product_id):
     if request.method == 'POST':
-        cantidad = int(request.POST.get('cantidad', 1))
         cart = request.session.get('cart', {})
-        if cantidad > 0:
-            cart[str(product_id)] = cantidad
+        cantidad_actual = cart.get(str(product_id), 1)
+        accion = request.POST.get('accion')
+        cantidad_input = request.POST.get('cantidad')
+        if accion == 'sumar':
+            cantidad_actual += 1
+        elif accion == 'restar':
+            cantidad_actual -= 1
+        elif cantidad_input:
+            try:
+                cantidad_actual = int(cantidad_input)
+            except ValueError:
+                cantidad_actual = 1
+        if cantidad_actual > 0:
+            cart[str(product_id)] = cantidad_actual
         else:
             cart.pop(str(product_id), None)
         request.session['cart'] = cart

@@ -122,6 +122,29 @@
               <span x-show="sidebarOpen" class="ml-4">Gestionar Posts</span>
             </a>
           </li>
+          <li class="hover:bg-white/10" x-data="{ open: false }" @click.away="open = false">
+            <div class="flex items-center px-4 py-2">
+              <button @click="open = !open" class="flex items-center w-full text-white focus:outline-none">
+                <span class="material-icons-outlined">article</span>
+                <span x-show="sidebarOpen" class="ml-4">Blog</span>
+                <span class="material-icons-outlined ml-auto" x-show="sidebarOpen">expand_more</span>
+              </button>
+            </div>
+            <template x-if="open && sidebarOpen">
+              <ul class="pl-12">
+                <li>
+                  <a href="{% url 'blog:dashboard' %}" @click="open = false" class="flex items-center text-white hover:text-[#C5A46B] py-1">
+                    <span class="material-icons-outlined text-sm mr-2">article</span> Gestionar Posts
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'blog:categorias_dashboard' %}" @click="open = false" class="flex items-center text-white hover:text-[#C5A46B] py-1">
+                    <span class="material-icons-outlined text-sm mr-2">category</span> Categorías Publicaciones
+                  </a>
+                </li>
+              </ul>
+            </template>
+          </li>
           <li class="px-4 py-2 hover:bg-white/10 flex items-center">
             <a href="{% url 'contabilidad:clientes' %}" class="flex items-center w-full text-white" @click="$dispatch('close-catalogo')">
               <span class="material-icons-outlined">account_balance</span>
@@ -135,11 +158,6 @@
             </a>
           </li>
           <li class="px-4 py-2 hover:bg-white/10 flex items-center">
-            <a href="{% url 'blog:categorias_dashboard' %}" class="flex items-center w-full text-white">
-              <span class="material-icons-outlined">category</span>
-              <span x-show="sidebarOpen" class="ml-4">Categorías Publicaciones</span>
-            </a>
-          </li>
           <li class="px-4 py-2 hover:bg-white/10 flex items-center">
             <a href="#" class="flex items-center w-full text-white">
               <span class="material-icons-outlined">hub</span>
